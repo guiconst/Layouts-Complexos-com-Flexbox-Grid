@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+    </style>
+    <title>Menu Hamburguer</title>
+</head>
+
+<body class="bg-gray-100">
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <!-- LOGO -->
+                <div class="flex space-x-7">
+                    <div>
+                        <a href="#" class="flex items-center py-4 px-2">
+                            <span class="font-semibold text-gray-500 text-lg">LOGO</span>
+                        </a>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-1">
+                        <a href="#"
+                            class="py-4 px-2 text-purple-600 border-b-4 border-purple-600 font-semibold">Home</a>
+                        <a href="#"
+                            class="py-4 px-2 text-gray-500 font-semibold hover:text-purple-600 transition duration-300">Serviços</a>
+                        <a href="#"
+                            class="py-4 px-2 text-gray-500 font-semibold hover:text-purple-600 transition duration-300">Sobre</a>
+                        <a href="#"
+                            class="py-4 px-2 text-gray-500 font-semibold hover:text-purple-600 transition duration-300">Contato</a>
+                    </div>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="btn-mobile" class="outline-none mobile-menu-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500 hover:text-purple-600"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor" x-show="!showMenu">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="hidden mobile-menu md:hidden" id="mobile-menu">
+            <ul>
+                <li><a href="#" class="block text-sm px-2 py-4 text-white bg-purple-600 font-semibold">Home</a></li>
+                <li><a href="#" class="block text-sm px-2 py-4 text-gray-500 hover:text-purple-600">Serviços</a></li>
+                <li><a href="#" class="block text-sm px-2 py-4 text-gray-500 hover:text-purple-600">Sobre</a></li>
+                <li><a href="#" class="block text-sm px-2 py-4 text-gray-500 hover:text-purple-600">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="py-10 text-center">
+        <h1 class="text-4xl font-bold mb-4">Exemplo de Menu Responsivo</h1>
+        <p class="text-lg text-gray-600">Redimensione a janela do navegador para ver o menu responsivo funcionar.</p>
+    </div>
+    <script>
+        // seleciona o botao e o menu
+        const btn = document.querySelector('#btn-mobile');
+        const menu = document.querySelector('#mobile-menu');
+
+        // adiciona um evento de clique no botao
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+    </script>
+
+</body>
+
+</html>
